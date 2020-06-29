@@ -81,7 +81,7 @@ TCL_LIB_FLAGS = -ltcl$(TCL_VER)
 # -----
 # GHC
 
-GHC ?= ghc
+GHC ?= stack ghc -- 
 GHCJOBS ?= 1
 
 GHCVERSION=$(shell $(GHC) --version | head -1 | egrep -o "[0-9]+\.[0-9]+\.[0-9]" )

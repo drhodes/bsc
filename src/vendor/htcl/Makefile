@@ -1,5 +1,6 @@
 GHCFLAGS += -Wall $(shell pkg-config --silence-errors --cflags-only-I tcl || echo -I/usr/include/tcl)
-GHC ?= ghc
+GHC ?= stack ghc --
+
 
 # We use GHC to compile this, so it has the proper RTS includes
 %.o: %.c
